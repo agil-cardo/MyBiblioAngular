@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h2>Create your compte et joins Us</h2>
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+      <!-- capte onsubmit et l'executer on vient de le creer -->
+      <div class="form-group">
+        <label for="email">tu correo gordo</label>
+        <input type="text" id="email" class="form-control" formControlName="email">
+      </div>
+      <div class="form-group">
+        <label for="password">tu clave papito</label>
+        <input type="password" id="password" class="form-control" formControlName="password">
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="signUpForm.invalid">crear mi cuenta</button>
+    </form>
+    <p class="text-danger">{{ errorMessage }}</p>
+  </div>
+</div>

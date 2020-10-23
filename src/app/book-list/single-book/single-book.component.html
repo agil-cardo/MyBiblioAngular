@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-xs-12">
+        <img style="max-width:400px" *ngIf="book.photo" [src]="book.photo">
+        <!-- [] porque se vincula a la URL de chargement du fichier -->
+       <h2>{{ book.title }} </h2> 
+       <h3> {{ book.author }}</h3>
+       <button class="btn btn-default" (click)="onBack()">Pagina Anterior</button>
+    </div>
+</div>
